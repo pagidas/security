@@ -19,6 +19,7 @@ export const View = ({ setResponseType }) => (
       <input
         type="checkbox"
         value="code"
+        checked="true"
         onChange={evt => setResponseType(evt.target.value)}
       ></input>
       <ResponseTypeSpan>code</ResponseTypeSpan>
