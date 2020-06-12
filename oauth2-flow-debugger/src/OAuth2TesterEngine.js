@@ -7,20 +7,15 @@ const OAuth2Tester = () => {
   const [authURI, setAuthURI] = React.useState(
     "https://authorization_uri/oauth2"
   )
-
   const [redirectURI, setRedirectURI] = React.useState(
     "https://my_app/auth/callback"
   )
-
   const [clientId, setClientId] = React.useState("the-client-id")
-
   const [scope, setScope] = React.useState("profile")
-
   const [state, setState] = React.useState("foobar")
-
   const [nonce, setNonce] = React.useState("a-nonce")
-
   const [responseType, setResponseType] = React.useState("code")
+  const [responseMode, setResponseMode] = React.useState("query")
 
   return (
     <>
@@ -33,6 +28,7 @@ const OAuth2Tester = () => {
         setState={setState}
         setNonce={setNonce}
         setResponseType={setResponseType}
+        setResponseMode={setResponseMode}
       />
       <RequestModal
         authURI={authURI}
@@ -42,6 +38,7 @@ const OAuth2Tester = () => {
         state={state}
         nonce={nonce}
         responseType={responseType}
+        responseMode={responseMode}
       />
     </>
   )

@@ -22,14 +22,15 @@ const getCurl = (
   scope,
   state,
   nonce,
-  responseType
+  responseType,
+  responseMode
 ) => `
     ${authURI}?
       &client_id=${clientId}
       &redirect_uri=${redirectURI}
       &scope=${scope}
       &response_type=${responseType}
-      &response_mode=query
+      &response_mode=${responseMode}
       &state=${state}
       &nonce=${nonce}
 `
@@ -42,6 +43,7 @@ const View = ({
   state,
   nonce,
   responseType,
+  responseMode,
 }) => {
   const [modal, setModal] = React.useState(false)
   const toggle = () => setModal(!modal)
@@ -63,7 +65,8 @@ const View = ({
                 scope,
                 state,
                 nonce,
-                responseType
+                responseType,
+                responseMode
               )}
             </Request>
           </ModalBody>

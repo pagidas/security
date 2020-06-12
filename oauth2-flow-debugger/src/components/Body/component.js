@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import ResponseTypeCheckbox from "./ResponseTypeCheckbox"
+import ResponseModeCheckbox from "./ResponseModeCheckbox"
 import RequestInputBars from "./RequestInputBars"
 
 const Body = styled.div`
@@ -18,6 +19,7 @@ export const View = ({
   setState,
   setNonce,
   setResponseType,
+  setResponseMode,
 }) => (
   <Body>
     <RequestInputBars
@@ -29,6 +31,10 @@ export const View = ({
       setNonce={setNonce}
     />
     <ResponseTypeCheckbox setResponseType={setResponseType} />
+
+    <ResponseModeCheckbox
+      setResponseMode={setResponseMode}
+    ></ResponseModeCheckbox>
   </Body>
 )
 
