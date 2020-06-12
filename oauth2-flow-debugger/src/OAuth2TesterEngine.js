@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./components/Header"
-import Body from "./components/Body"
-import RequestModal from "./components/RequestModal"
+import Body from "./components/Body/component"
+import RequestModal from "./components/Body/RequestModal"
 
 const OAuth2Tester = () => {
   const [authURI, setAuthURI] = React.useState(
