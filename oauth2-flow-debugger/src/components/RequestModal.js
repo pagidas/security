@@ -15,18 +15,34 @@ const RequestBody = styled.div`
   background-color: #545454;
 `
 
-const getCurl = (authURI, redirectURI, clientId, scope, state, nonce) => `
+const getCurl = (
+  authURI,
+  redirectURI,
+  clientId,
+  scope,
+  state,
+  nonce,
+  responseType
+) => `
     ${authURI}?
       &client_id=${clientId}
       &redirect_uri=${redirectURI}
       &scope=${scope}
-      &response_type=code
+      &response_type=${responseType}
       &response_mode=query
       &state=${state}
       &nonce=${nonce}
 `
 
-const View = ({ authURI, redirectURI, clientId, scope, state, nonce }) => {
+const View = ({
+  authURI,
+  redirectURI,
+  clientId,
+  scope,
+  state,
+  nonce,
+  responseType,
+}) => {
   const [modal, setModal] = React.useState(false)
   const toggle = () => setModal(!modal)
 
@@ -40,7 +56,15 @@ const View = ({ authURI, redirectURI, clientId, scope, state, nonce }) => {
         <RequestBody>
           <ModalBody>
             <Request>
-              {getCurl(authURI, redirectURI, clientId, scope, state, nonce)}
+              {getCurl(
+                authURI,
+                redirectURI,
+                clientId,
+                scope,
+                state,
+                nonce,
+                responseType
+              )}
             </Request>
           </ModalBody>
         </RequestBody>

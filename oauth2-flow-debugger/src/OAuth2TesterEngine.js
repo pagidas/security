@@ -20,6 +20,8 @@ const OAuth2Tester = () => {
 
   const [nonce, setNonce] = React.useState("a-nonce")
 
+  const [responseType, setResponseType] = React.useState("code")
+
   return (
     <>
       <Header />
@@ -30,6 +32,7 @@ const OAuth2Tester = () => {
         setScope={setScope}
         setState={setState}
         setNonce={setNonce}
+        setResponseType={setResponseType}
       />
       <RequestModal
         authURI={authURI}
@@ -38,6 +41,7 @@ const OAuth2Tester = () => {
         scope={scope}
         state={state}
         nonce={nonce}
+        responseType={responseType}
       />
     </>
   )

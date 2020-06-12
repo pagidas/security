@@ -15,7 +15,7 @@ const Description = styled.p`
 
 const Header = () => (
   <div className="p-5 bg-info my-0">
-    <Title className="display-4"> &lt;OAuth 2.0 tester /&gt; </Title>
+    <Title className="display-4"> &lt;OAuth2Tester /&gt; </Title>
     <Description className="lead">
       A tool to help you debug an oauth2 flow.
     </Description>
