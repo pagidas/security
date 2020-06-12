@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 
 const RequestModal = styled.div`
   margin-top: 100px;
+  margin-bottom: 200px;
   text-align: center;
 `
 

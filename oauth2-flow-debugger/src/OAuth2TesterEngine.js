@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./components/Header"
 import Body from "./components/Body/component"
 import RequestModal from "./components/Body/RequestModal"
+import MidSection from "./components/MidSection"
 
 const OAuth2Tester = () => {
   const [authURI, setAuthURI] = React.useState(
@@ -20,6 +21,7 @@ const OAuth2Tester = () => {
   return (
     <>
       <Header />
+      <MidSection />
       <Body
         setAuthURI={setAuthURI}
         setRedirectURI={setRedirectURI}
