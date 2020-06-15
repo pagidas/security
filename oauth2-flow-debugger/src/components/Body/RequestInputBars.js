@@ -17,7 +17,7 @@ export const View = ({
     <InputBar>
       <Input
         bsSize="lg"
-        placeholder="https://authorization_uri/oauth2"
+        placeholder="https://authorization_server/oauth2"
         onChange={evt => setAuthURI(evt.target.value)}
       />
       <FormText>Required: This is the authorization uri</FormText>
@@ -29,7 +29,9 @@ export const View = ({
         placeholder="https://my_app/auth/callback"
         onChange={evt => setRedirectURI(evt.target.value)}
       />
-      <FormText>Required: This is the redirect uri</FormText>
+      <FormText>
+        Optional: This app provides its own callback if none is set
+      </FormText>
     </InputBar>
 
     <InputBar>

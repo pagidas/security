@@ -9,7 +9,7 @@ const OAuth2Tester = () => {
     "https://authorization_uri/oauth2"
   )
   const [redirectURI, setRedirectURI] = React.useState(
-    "https://my_app/auth/callback"
+    "http://localhost:3000/auth/callback"
   )
   const [clientId, setClientId] = React.useState("the-client-id")
   const [scope, setScope] = React.useState("profile")
