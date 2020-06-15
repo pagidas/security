@@ -4,7 +4,7 @@ import Body from "./components/Body/component"
 import RequestModal from "./components/Body/RequestModal"
 import MidSection from "./components/MidSection"
 
-const OAuth2Tester = () => {
+const OAuth2Tester = props => {
   const [authURI, setAuthURI] = React.useState(
     "https://authorization_uri/oauth2"
   )

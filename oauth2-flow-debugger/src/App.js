@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./App.css"
 import OAuth2Tester from "./OAuth2TesterEngine"
-import Success from "./components/SuccessPage/component"
+import AuthCallback from "./components/AuthCallback/component"
 
 export const App = () => (
   <div className="App">
@@ -12,10 +12,7 @@ export const App = () => (
           <OAuth2Tester />
         </Route>
         <Route path="/auth/callback">
-          {/* Check response and if successfull or not */}
-          <Success />
-          {/* or */}
-          {/* Error component */}
+          <AuthCallback />
         </Route>
       </Switch>
     </Router>
