@@ -16,7 +16,7 @@ const RequestBody = styled.div`
   background-color: #545454;
 `
 
-const getCurl = (
+const displayAuthRequest = (
   authURI,
   redirectURI,
   clientId,
@@ -48,6 +48,7 @@ const View = ({
 }) => {
   const [modal, setModal] = React.useState(false)
   const toggle = () => setModal(!modal)
+  const authRequest = `${authURI}?client_id=${clientId}&redirect_uri=${redirectURI}&scope=${scope}&response_type=${responseType}&response_mode=${responseMode}&state=${state}&nonce=${nonce}`
 
   return (
     <RequestModal>
@@ -59,7 +60,7 @@ const View = ({
         <RequestBody>
           <ModalBody>
             <Request>
-              {getCurl(
+              {displayAuthRequest(
                 authURI,
                 redirectURI,
                 clientId,
@@ -76,7 +77,7 @@ const View = ({
           <Button
             outline
             color="success"
-            onClick={() => alert("Fire the request")}
+            onClick={() => (window.location.href = authRequest)}
           >
             Send request
           </Button>{" "}
